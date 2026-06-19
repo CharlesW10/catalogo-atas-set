@@ -96,5 +96,51 @@
     "cta_label": "Solicitar informações",
     "publicavel": true,
     "fonte_publica_resumo": "Diário Oficial dos Municípios do Estado do Espírito Santo"
+  },
+  {
+    "ata_id": "ba-2025-uf-reconcavo-item-5-televisor-hq-60",
+    "slug": "ba-2025-uf-reconcavo-item-5-televisor-hq-60",
+    "orgao": "Universidade Federal do Recôncavo da Bahia",
+    "sigla_orgao": "UFRB",
+    "cidade": "Cruz das Almas",
+    "estado": "BA",
+    "esfera": "Federal",
+    "uasg": "158092",
+    "pregao": "PE 90047/2025",
+    "processo_administrativo": "23007.00024630/2025-75",
+    "ata_numero": "91/2025",
+    "objeto_geral": "Aquisição de Equipamentos de Áudio e Vídeo para Salas de Aula da UFRB",
+    "produto": "Televisor Smart TV 60 polegadas HQ",
+    "categoria_produto": "Áudio e Vídeo",
+    "marca": "HQ",
+    "fabricante": "Belmicro",
+    "modelo": "HQS60NKHM",
+    "item": "05",
+    "quantidade_registrada": 120,
+    "valor_unitario": 2386.0,
+    "valor_total": 286320.0,
+    "garantia": "12 meses",
+    "vigencia_texto": "1 ano, contado a partir do primeiro dia útil subsequente à data de divulgação no PNCP.",
+    "status_publico": "Ata vigente / Solicite informações",
+    "especificacoes_publicas": [
+      "SMARTV 60 polegadas Tela Plana",
+      "Resolução 4K UHD",
+      "Conversor para TV Digital Integrado",
+      "Design Ultraslim com Bordas Infinitas",
+      "Wi-Fi Integrado e Bluetooth",
+      "Entradas: 3 HDMI, 2 USB",
+      "Acompanha Controle Remoto",
+      "Tensão Bivolt"
+    ],
+    "contato_nome": "Charles",
+    "contato_whatsapp": "5531971352952",
+    "contato_whatsapp_url": "https://wa.me/5531971352952",
+    "contato_emails_publicos": [
+      "contato@chtechlicitacoes.com.br",
+      "charlesw10@hotmail.com"
+    ],
+    "cta_label": "Solicitar informações",
+    "publicavel": true,
+    "fonte_publica_resumo": "Portal Nacional de Contratações Públicas (PNCP)"
   }
 ]
