@@ -248,11 +248,11 @@
     "processo_administrativo": "64021.002556/2025-31",
     "ata_numero": "29/2026",
     "objeto_geral": "Registro de preços para a aquisição de mobiliários e material permanente, para atender as necessidades do 19º Batalhão de Caçadores",
-    "produto": "Frigobar 80 Litros Branco HQ",
+    "produto": "Frigobar/Refrigerador HQ 93 Litros Branco",
     "categoria_produto": "Eletrodomésticos",
     "marca": "HQ",
     "fabricante": "Belmicro",
-    "modelo": "BC-93",
+    "modelo": "HQ-93FB",
     "item": "75",
     "quantidade_registrada": 40,
     "valor_unitario": 980.0,
@@ -261,14 +261,14 @@
     "vigencia_texto": "12 meses",
     "status_publico": "Ata vigente / Solicite informações",
     "especificacoes_publicas": [
-      "Capacidade: 80 L",
-      "Tensão Alimentação: 110 V",
+      "Capacidade aproximada: 93 litros",
       "Cor: Branca",
-      "Características Adicionais: Prateleiras Modulares",
-      "Consumo Máximo: 19 Kwh Mensal",
-      "Altura: 63,20 CM",
-      "Largura: 48,20 CM",
-      "Profundidade: 51,90 CM"
+      "Tensão de alimentação: 110 V",
+      "Tipo: Frigobar/Refrigerador compacto",
+      "Prateleiras modulares internas",
+      "Consumo máximo estimado: 19 kWh mensal",
+      "Certificação INMETRO",
+      "Garantia: 12 meses"
     ],
     "contato_nome": "Charles",
     "contato_whatsapp": "5531971352952",
@@ -279,7 +279,8 @@
     ],
     "cta_label": "Solicitar informações",
     "publicavel": true,
-    "fonte_publica_resumo": "Processo Nº 64021.002556/2025-31 (BA)"
+    "fonte_publica_resumo": "Processo Nº 64021.002556/2025-31 (BA)",
+    "descricao_publica": "Frigobar HQ branco, compacto e funcional, indicado para ambientes administrativos, alojamentos, salas de apoio, copas e unidades operacionais que necessitam de refrigeração prática em pequeno porte."
   },
   {
     "ata_id": "ba-2026-19-batalhao-cacadores-item-76-frigobar-hq-124l",
