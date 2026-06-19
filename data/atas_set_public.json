@@ -356,13 +356,13 @@
       "Capacidade líquida mínima: 47 litros",
       "Cor externa: Branca",
       "Tensão de alimentação: 220 V",
-      "Altura: até 47 cm",
-      "Largura: até 40 cm",
-      "Profundidade: até 49 cm",
       "Tipo de refrigeração: Estática",
       "Controle de temperatura: Termostato ajustável",
       "Porta com vedação magnética",
-      "Classificação A de eficiência energética"
+      "Prateleiras internas removíveis",
+      "Classificação A de eficiência energética",
+      "Dimensões: Altura 47 cm / Largura 40 cm / Prof. 49 cm",
+      "Garantia: 12 meses"
     ],
     "contato_nome": "Charles",
     "contato_whatsapp": "5531971352952",
@@ -373,7 +373,8 @@
     ],
     "cta_label": "Solicitar informações",
     "publicavel": true,
-    "fonte_publica_resumo": "Processo Nº 60575.000060/2025-14 (DF)"
+    "fonte_publica_resumo": "Processo Nº 60575.000060/2025-14 (DF)",
+    "descricao_publica": "Frigobar HQ branco de 47 litros, compacto e funcional, indicado para salas administrativas, copas, alojamentos, unidades de apoio e ambientes institucionais que necessitam de refrigeração prática em pequeno porte."
   },
   {
     "ata_id": "df-2026-administracao-interna-item-04-frigobar-hq-124l",
