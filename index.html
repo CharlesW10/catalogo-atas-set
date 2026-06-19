@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Atas | SET Computadores e Serviços</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-glow"></div>
+    <header class="glass-header">
+        <div class="logo">SET <span>Computadores e Serviços</span></div>
+        <nav>
+            <ul>
+                <li><a href="#atas">Catálogo de Atas</a></li>
+                <li><a href="#contato">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Adesão a Atas de <span>Registro de Preços</span></h1>
+            <p>Catálogo público de Atas vigentes da SET Computadores. Transparência, agilidade e conformidade para o seu Órgão.</p>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Buscar por órgão, produto, UASG ou pregão...">
+            </div>
+        </section>
+
+        <section id="atas" class="atas-section">
+            <div class="filters">
+                <select id="filterCategoria">
+                    <option value="">Todas as Categorias</option>
+                </select>
+                <select id="filterEstado">
+                    <option value="">Todos os Estados</option>
+                </select>
+            </div>
+            
+            <div class="atas-grid" id="atasGrid">
+                <div style="text-align:center; padding: 2rem; color: #526173;">Carregando catálogo...</div>
+            </div>
+        </section>
+
+        <section id="contato" class="contact-section">
+            <h2>Precisa de ajuda imediata?</h2>
+            <p>Fale diretamente com nosso especialista em licitações e agilize a sua adesão.</p>
+            <div class="contact-buttons">
+                <a id="btnWhatsappDirect" href="#" target="_blank" class="btn-whatsapp">Falar pelo WhatsApp</a>
+                <a id="btnEmailDirect" href="#" class="btn-email">Enviar E-mail</a>
+            </div>
+        </section>
+
+        <!-- Modal do Produto -->
+        <div id="productModal" class="modal-overlay">
+            <div class="modal-content" style="max-width: 800px;">
+                <span class="close-btn" onclick="closeProductModal()">&times;</span>
+                <div class="product-modal-grid">
+                    <div class="product-modal-img">
+                        <img id="pmImage" src="" alt="Produto">
+                    </div>
+                    <div class="product-modal-info">
+                        <h3 id="pmTitle">Nome do Produto</h3>
+                        <p id="pmDesc">Descrição do Objeto Geral</p>
+                        <table class="spec-table">
+                            <tbody id="pmSpecsTable">
+                                <!-- Preenchido via JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div style="border-top: 1px solid #d7e3f1; padding-top: 1.5rem;">
+                    <h4 style="margin-bottom: 1rem; color: #0d4d9c;">Dados da Ata</h4>
+                    <table class="spec-table">
+                        <tbody id="pmAtaTable">
+                            <!-- Preenchido via JS -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="modal-actions">
+                    <button class="btn-whatsapp" id="pmBtnZap" style="border:none;">WhatsApp</button>
+                    <button class="btn-email" id="pmBtnEmail">E-mail</button>
+                    <button class="btn-primary" id="pmBtnLead">Solicitar Informações</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Formulário (Lead) -->
+        <div id="leadModal" class="modal-overlay">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeLeadModal()">&times;</span>
+                <h3 style="margin-bottom: 0.5rem; color:#0d4d9c;">Solicitar Informações</h3>
+                <p id="modalAtaName" style="color:#526173; font-weight:600; margin-bottom: 1.5rem;"></p>
+                <form id="leadForm">
+                    <input type="hidden" id="ataId" name="ataId">
+                    <input type="hidden" id="origem" name="origem" value="site_atas">
+                    
+                    <div class="form-row">
+                        <div class="form-group half-width">
+                            <label for="nome">Nome *</label>
+                            <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+                        </div>
+                        <div class="form-group half-width">
+                            <label for="orgao_entidade">Órgão / Entidade *</label>
+                            <input type="text" id="orgao_entidade" name="orgao_entidade" required placeholder="Ex: UFMT">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group half-width">
+                            <label for="cargo_setor">Cargo / Setor</label>
+                            <input type="text" id="cargo_setor" name="cargo_setor" placeholder="Ex: Pregoeiro">
+                        </div>
+                        <div class="form-group half-width">
+                            <label for="cidade_estado">Cidade / Estado</label>
+                            <input type="text" id="cidade_estado" name="cidade_estado" placeholder="Ex: Cuiabá/MT">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group half-width">
+                            <label for="telefone_whatsapp">Telefone / WhatsApp</label>
+                            <input type="text" id="telefone_whatsapp" name="telefone_whatsapp" placeholder="(99) 99999-9999">
+                        </div>
+                        <div class="form-group half-width">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="email@orgao.gov.br">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="interesse">Interesse *</label>
+                        <select id="interesse" name="interesse" required>
+                            <option value="">Selecione...</option>
+                            <option value="Solicitar informações sobre adesão">Solicitar informações sobre adesão</option>
+                            <option value="Verificar disponibilidade">Verificar disponibilidade</option>
+                            <option value="Receber proposta/documentação">Receber proposta/documentação</option>
+                            <option value="Falar sobre fornecimento">Falar sobre fornecimento</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem (opcional)</label>
+                        <textarea id="mensagem" name="mensagem" rows="3" placeholder="Detalhes da sua solicitação..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary full-width" id="btnSubmit">Enviar Solicitação</button>
+                    <div id="formFeedback" class="feedback-msg"></div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SET Computadores e Serviços Ltda. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Template do Card de Ata -->
+    <template id="ataCardTemplate">
+        <div class="glass-panel ata-card">
+            <div class="ata-header">
+                <div class="ata-status"></div>
+                <div class="ata-id"></div>
+            </div>
+            
+            <div class="ata-product-image" tabindex="0" title="Clique para ampliar o produto" aria-label="Abrir modal do produto">
+                <img src="" alt="Produto" loading="lazy">
+                <span class="click-to-enlarge">🔍 Ampliar</span>
+            </div>
+
+            <h3 class="ata-title"></h3>
+            <p class="ata-desc"></p>
+            
+            <div class="ata-details">
+                <div class="detail-row"><span>Órgão:</span> <strong class="val-orgao"></strong></div>
+                <div class="detail-row"><span>UASG:</span> <strong class="val-uasg"></strong></div>
+                <div class="detail-row"><span>Pregão:</span> <strong class="val-pregao"></strong></div>
+                <div class="detail-row"><span>Item:</span> <strong class="val-item"></strong></div>
+                <div class="detail-row"><span>Quantidade:</span> <strong class="val-qtd"></strong></div>
+                <div class="detail-row"><span>V. Unitário:</span> <strong class="val-unit"></strong></div>
+                <div class="detail-row"><span>V. Total:</span> <strong class="val-total"></strong></div>
+            </div>
+            
+            <div class="card-actions">
+                <button class="btn-secondary btn-ver-produto">Ver Detalhes</button>
+                <button class="btn-primary action-btn">Solicitar Adesão</button>
+            </div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" width="100%" height="100%">
+  <title>Freezer Vertical HQ-290FV</title>
+  <desc>Ilustração vetorial de freezer vertical branco para catálogo público de atas.</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+  
+  <!-- Corpo -->
+  <rect x="30" y="20" width="140" height="350" rx="6" fill="#ffffff" filter="url(#shadow)" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <!-- Painel superior -->
+  <path d="M 30 26 Q 30 20 36 20 L 164 20 Q 170 20 170 26 L 170 45 L 30 45 Z" fill="#f8fafc"/>
+  <rect x="85" y="25" width="30" height="12" rx="2" fill="#334155"/>
+  <text x="100" y="34" font-family="monospace" font-size="8" fill="#10b981" text-anchor="middle">-18</text>
+  
+  <!-- Porta principal -->
+  <rect x="34" y="50" width="132" height="315" rx="2" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  
+  <!-- Puxador da porta -->
+  <rect x="150" y="160" width="6" height="80" rx="3" fill="#e2e8f0"/>
+  
+  <!-- Detalhe da base / Pés -->
+  <rect x="40" y="370" width="10" height="6" fill="#94a3b8" rx="1"/>
+  <rect x="150" y="370" width="10" height="6" fill="#94a3b8" rx="1"/>
+
+  <!-- Brilho suave da porta para aspecto metálico/vidro -->
+  <path d="M 36 52 L 46 52 L 46 363 L 36 363 Z" fill="rgba(241, 245, 249, 0.5)"/>
+</svg>
